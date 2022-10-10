@@ -10,6 +10,7 @@ import { AddEditEmpleadoComponent } from './components/add-edit-empleado/add-edi
 import { ListEmpleadoComponent } from './components/list-empleado/list-empleado.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { MensajeConfirmacionComponent } from './components/shared/mensaje-confirmacion/mensaje-confirmacion.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AddEditEmpleadoComponent,
     ListEmpleadoComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    MensajeConfirmacionComponent
   ],
   imports: [
     BrowserModule,
