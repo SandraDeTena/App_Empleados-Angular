@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-mensaje-confirmacion',
+  selector: 'mensaje-confirmacion',
   templateUrl: './mensaje-confirmacion.component.html',
   styleUrls: ['./mensaje-confirmacion.component.css']
 })
