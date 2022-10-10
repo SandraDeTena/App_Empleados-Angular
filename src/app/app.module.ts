@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatSliderModule } from '@angular/material/slider';
+import { AddEditEmpleadoComponent } from './components/add-edit-empleado/add-edit-empleado.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddEditEmpleadoComponent
   ],
   imports: [
     BrowserModule,
