@@ -10,6 +10,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 //Importar Iconos de Angular Material
 import { MatIconModule } from '@angular/material/icon';
 
+//Importal Table de Angular Material
+import { MatTableModule } from '@angular/material/table';
+
 
 
 
@@ -19,12 +22,14 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     MatSliderModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ],
   exports: [
     MatSliderModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule
   ]
 })
 export class AngularMaterialModule { }
