@@ -9,13 +9,15 @@ import { MatSliderModule } from '@angular/material/slider';
 import { AddEditEmpleadoComponent } from './components/add-edit-empleado/add-edit-empleado.component';
 import { ListEmpleadoComponent } from './components/list-empleado/list-empleado.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddEditEmpleadoComponent,
     ListEmpleadoComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
