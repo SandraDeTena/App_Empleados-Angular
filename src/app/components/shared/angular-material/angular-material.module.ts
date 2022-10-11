@@ -14,8 +14,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 
 
-
-
 @NgModule({
   declarations: [],
   imports: [
@@ -29,7 +27,8 @@ import { MatTableModule } from '@angular/material/table';
     MatSliderModule,
     MatToolbarModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
   ]
 })
+
 export class AngularMaterialModule { }
