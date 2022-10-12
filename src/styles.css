@@ -4,6 +4,7 @@ html,
 body {
     height: 100%;
     background-color: #424242;
+    color: #fff;
 }
 
 body {
@@ -13,4 +14,5 @@ body {
 
 button:focus {
     outline: none;
+    border: none;
 }
