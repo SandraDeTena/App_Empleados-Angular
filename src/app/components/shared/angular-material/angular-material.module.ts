@@ -25,6 +25,10 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 //Importar el Sort - Ordenamiento
 import { MatSortModule } from '@angular/material/sort';
 
+//Importar el calendario
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 @NgModule({
   declarations: [],
@@ -37,7 +41,9 @@ import { MatSortModule } from '@angular/material/sort';
     MatFormFieldModule,
     MatInputModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   exports: [
     MatSliderModule,
@@ -47,7 +53,9 @@ import { MatSortModule } from '@angular/material/sort';
     MatFormFieldModule,
     MatInputModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ]
 })
 
