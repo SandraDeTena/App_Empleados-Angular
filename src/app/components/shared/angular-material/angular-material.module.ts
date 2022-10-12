@@ -10,7 +10,20 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 //Importar Iconos de Angular Material
 import { MatIconModule } from '@angular/material/icon';
 
+//Importal Table de Angular Material
+import { MatTableModule } from '@angular/material/table';
 
+//Importar FormField, para el input
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+//Importar el input
+import { MatInputModule } from '@angular/material/input';
+
+//Importar páginador
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+//Importar el Sort - Ordenamiento
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -19,12 +32,23 @@ import { MatIconModule } from '@angular/material/icon';
     CommonModule,
     MatSliderModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   exports: [
     MatSliderModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatPaginatorModule,
+    MatSortModule
   ]
 })
+
 export class AngularMaterialModule { }
