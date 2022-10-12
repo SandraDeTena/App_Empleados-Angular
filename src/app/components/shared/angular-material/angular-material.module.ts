@@ -13,6 +13,12 @@ import { MatIconModule } from '@angular/material/icon';
 //Importal Table de Angular Material
 import { MatTableModule } from '@angular/material/table';
 
+//Importar FormField, para el input
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+//Importar el input
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [],
@@ -21,13 +27,17 @@ import { MatTableModule } from '@angular/material/table';
     MatSliderModule,
     MatToolbarModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     MatSliderModule,
     MatToolbarModule,
     MatIconModule,
     MatTableModule,
+    MatFormFieldModule,
+    MatInputModule
   ]
 })
 
