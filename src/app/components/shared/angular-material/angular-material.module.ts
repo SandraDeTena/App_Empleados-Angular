@@ -22,6 +22,9 @@ import { MatInputModule } from '@angular/material/input';
 //Importar páginador
 import { MatPaginatorModule } from '@angular/material/paginator';
 
+//Importar el Sort - Ordenamiento
+import { MatSortModule } from '@angular/material/sort';
+
 
 @NgModule({
   declarations: [],
@@ -33,7 +36,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSortModule
   ],
   exports: [
     MatSliderModule,
@@ -42,7 +46,8 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatTableModule,
     MatFormFieldModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSortModule
   ]
 })
 
