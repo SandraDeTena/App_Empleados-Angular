@@ -19,6 +19,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 //Importar el input
 import { MatInputModule } from '@angular/material/input';
 
+//Importar páginador
+import { MatPaginatorModule } from '@angular/material/paginator';
+
 
 @NgModule({
   declarations: [],
@@ -29,7 +32,8 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatPaginatorModule
   ],
   exports: [
     MatSliderModule,
@@ -37,7 +41,8 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatTableModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatPaginatorModule
   ]
 })
 
