@@ -144,4 +144,11 @@ export class ListEmpleadoComponent implements OnInit {
 
   // }
 
+  eliminarEmpleado(index: number) {
+    this.empleadoService.eliminarEmpleado(index);
+    // Para generar de nuevo
+    // this.cargarEmpleados();
+    console.log(index);
+
+  }
 }
