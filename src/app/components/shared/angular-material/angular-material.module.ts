@@ -38,6 +38,9 @@ import { MatRadioModule } from '@angular/material/radio';
 //Importar el cuadro de diálogo de Material Angular
 import { MatDialogModule } from '@angular/material/dialog';
 
+//Importar Buttons de Angular
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [],
@@ -55,7 +58,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatNativeDateModule,
     MatSelectModule,
     MatRadioModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule
   ],
   exports: [
     MatSliderModule,
@@ -70,7 +74,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatNativeDateModule,
     MatSelectModule,
     MatRadioModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule
   ]
 })
 
