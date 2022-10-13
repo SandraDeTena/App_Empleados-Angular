@@ -1,5 +1,5 @@
 export class Empleado {
-    nombre: string;
+    nombreCompleto: string;
     telefono: string;
     email: string;
     fechaIngreso: Date;
