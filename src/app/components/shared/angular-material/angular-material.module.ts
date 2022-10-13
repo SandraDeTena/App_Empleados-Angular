@@ -32,6 +32,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 //Importar el Select
 import { MatSelectModule } from '@angular/material/select';
 
+//Importar Radio Button | API reference for Angular Material radio
+import { MatRadioModule } from '@angular/material/radio';
+
 
 @NgModule({
   declarations: [],
@@ -47,7 +50,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatSortModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule
   ],
   exports: [
     MatSliderModule,
@@ -60,7 +64,8 @@ import { MatSelectModule } from '@angular/material/select';
     MatSortModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+    MatRadioModule
   ]
 })
 
