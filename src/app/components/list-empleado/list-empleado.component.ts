@@ -137,7 +137,7 @@ export class ListEmpleadoComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  // Llenar lista de empleados
+  // Cargar lista de empleados
   // cargarEmpleados() {
   //   this.listEmpleado = this.empleadoService.getEmpleados();
   //   this.dataSource = new MatTableDataSource(this.listEmpleado);
