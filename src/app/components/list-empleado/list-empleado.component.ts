@@ -4,6 +4,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { EmpleadoService } from 'src/app/services/empleado.service';
 import { Empleado } from 'src/app/models/empleado';
+import { MatDialog } from '@angular/material/dialog';
+import { MensajeConfirmacionComponent } from '../shared/mensaje-confirmacion/mensaje-confirmacion.component';
 
 export interface MyPeople {
   position: number;
@@ -122,11 +124,10 @@ export class ListEmpleadoComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
 
-  constructor(private empleadoService: EmpleadoService) { }
+  constructor(private empleadoService: EmpleadoService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+
     // this.cargarEmpleados;
   }
 
@@ -136,19 +137,31 @@ export class ListEmpleadoComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  // Llenar lista de empleados
+  // Cargar lista de empleados
   // cargarEmpleados() {
   //   this.listEmpleado = this.empleadoService.getEmpleados();
   //   this.dataSource = new MatTableDataSource(this.listEmpleado);
+  // this.dataSource.paginator = this.paginator;
+  // this.dataSource.sort = this.sort;
   //   console.log(this.listEmpleado);
 
   // }
 
   eliminarEmpleado(index: number) {
-    this.empleadoService.eliminarEmpleado(index);
-    // Para generar de nuevo
-    // this.cargarEmpleados();
-    console.log(index);
+    const dialogRef = this.dialog.open(MensajeConfirmacionComponent, {
+      width: '650px',
+      data: { mensaje: '¿Está seguro qué quieres eliminar el empleado de forma defimitiva?' },
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'aceptar') {
+        this.empleadoService.eliminarEmpleado(index);
+        // Para generar de nuevo
+        // this.cargarEmpleados();
+        console.log(index);
+      }
+
+    });
 
   }
 }
