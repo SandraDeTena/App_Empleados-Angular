@@ -1,4 +1,6 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
 
@@ -25,8 +27,13 @@ export class AddEditEmpleadoComponent implements OnInit {
   };
 
   //Estados civiles
-  estadosCiviles: any[] = ['Soltero/a', 'Casado/a', 'Viudo/a', 'Divorciado/a']
-  constructor() { }
+  estadosCiviles: any[] = ['Soltero/a', 'Casado/a', 'Viudo/a', 'Divorciado/a'];
+
+  //Formulario
+  form: FormGroup;
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({})
+  }
 
   ngOnInit(): void {
   }
