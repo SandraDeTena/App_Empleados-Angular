@@ -91,7 +91,7 @@ export class EmpleadoService {
 
   constructor() { }
 
-  getEmpleado() {
+  getEmpleados() {
     return this.listEmpleado.slice();
   }
 }
