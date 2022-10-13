@@ -67,18 +67,21 @@
                     <mat-radio-button value="NoSeguro" class="RadioButton">No estoy seguro</mat-radio-button>
                     <mat-radio-button value="NoDecir" class="RadioButton">No Decir</mat-radio-button>
                     <mat-radio-button value="Otro">Otro</mat-radio-button>
-
-
                 </mat-radio-group>
             </div>
 
-            <div class="col-lg-12">
-                Aceptar y Cancelar (Button)
+            <div class="col-lg-12" id="espacio">
+
+                <button type="button" class="btn btn-success btn-lg" id="buttonEnviar"
+                    style="float: right;">Enviar</button>
+
+                <button type="button" class="btn btn-secondary btn-lg" id="buttonCancelar" style="float: right;"
+                    routerLink="/">Cancelar</button>
             </div>
         </form>
     </div>
 
-    <div class="col-lg-4 offset-lg-2">
-        <img src="../../../assets/img/crear-usuario.jpg" width="95%" height="95%">
+    <div class="col-lg-4 offset-lg-2" id="imgFormulario">
+        <img src="../../../assets/img/crear-usuario.jpg">
     </div>
 </div>
