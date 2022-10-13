@@ -31,6 +31,7 @@ export class AddEditEmpleadoComponent implements OnInit {
 
   //Formulario
   form: FormGroup;
+
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
       nombreCompleto: [''],

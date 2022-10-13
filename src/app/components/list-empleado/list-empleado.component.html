@@ -11,7 +11,7 @@
 
 <mat-form-field appearance="standard">
     <mat-label>Filtro</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Filtro" #input>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Filtro" #input autocomplete="off">
 </mat-form-field>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
