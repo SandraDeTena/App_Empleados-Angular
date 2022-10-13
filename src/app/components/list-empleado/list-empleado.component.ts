@@ -149,15 +149,18 @@ export class ListEmpleadoComponent implements OnInit {
 
   eliminarEmpleado(index: number) {
     const dialogRef = this.dialog.open(MensajeConfirmacionComponent, {
-      width: '350px',
-      data: { mensaje: '¿Está seguro qué quieres eliminar el empleado?' },
+      width: '650px',
+      data: { mensaje: '¿Está seguro qué quieres eliminar el empleado de forma defimitiva?' },
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      this.empleadoService.eliminarEmpleado(index);
-      // Para generar de nuevo
-      // this.cargarEmpleados();
-      console.log(index);
+      if (result === 'aceptar') {
+        this.empleadoService.eliminarEmpleado(index);
+        // Para generar de nuevo
+        // this.cargarEmpleados();
+        console.log(index);
+      }
+
     });
 
   }
