@@ -40,7 +40,7 @@
     <!-- Fecha de Ingreso Column -->
     <ng-container matColumnDef="fechaIngreso">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Fecha de Ingreso </th>
-        <td mat-cell *matCellDef="let element"> {{element.fechaIngreso}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.fechaIngreso | date: "dd/MM/yyyy"}} </td>
     </ng-container>
 
     <!-- Teléfono -->
