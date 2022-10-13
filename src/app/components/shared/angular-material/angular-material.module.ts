@@ -35,6 +35,9 @@ import { MatSelectModule } from '@angular/material/select';
 //Importar Radio Button | API reference for Angular Material radio
 import { MatRadioModule } from '@angular/material/radio';
 
+//Importar el cuadro de diálogo de Material Angular
+import { MatDialogModule } from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [],
@@ -51,7 +54,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDialogModule
   ],
   exports: [
     MatSliderModule,
@@ -65,7 +69,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatRadioModule
+    MatRadioModule,
+    MatDialogModule
   ]
 })
 
