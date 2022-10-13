@@ -16,3 +16,9 @@ button:focus {
     outline: none;
     border: none;
 }
+
+simple-snack-bar span {
+    margin: auto;
+    text-align: center;
+
+}
