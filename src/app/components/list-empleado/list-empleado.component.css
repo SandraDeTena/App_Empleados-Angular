@@ -10,3 +10,8 @@ th {
     font-size: 14px;
     width: 100%;
 }
+
+#buttonAgregar {
+    background-color: #C2185B;
+    color: #fff;
+}

@@ -25,6 +25,16 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 //Importar el Sort - Ordenamiento
 import { MatSortModule } from '@angular/material/sort';
 
+//Importar el calendario
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
+//Importar el Select
+import { MatSelectModule } from '@angular/material/select';
+
+//Importar Radio Button | API reference for Angular Material radio
+import { MatRadioModule } from '@angular/material/radio';
+
 
 @NgModule({
   declarations: [],
@@ -37,7 +47,11 @@ import { MatSortModule } from '@angular/material/sort';
     MatFormFieldModule,
     MatInputModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatRadioModule
   ],
   exports: [
     MatSliderModule,
@@ -47,7 +61,11 @@ import { MatSortModule } from '@angular/material/sort';
     MatFormFieldModule,
     MatInputModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    MatRadioModule
   ]
 })
 

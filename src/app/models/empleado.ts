@@ -1,5 +1,5 @@
-export class Empleado {
-    nombre: string;
+export interface Empleado {
+    nombreCompleto: string;
     telefono: string;
     email: string;
     fechaIngreso: Date;

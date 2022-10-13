@@ -1,1 +1,91 @@
-<p>add-edit-empleado works!</p>
+<div class="row">
+    <div class="col-lg-6">
+        <h2>Agregar Empleado</h2>
+    </div>
+</div>
+
+<pre>{{form.value | json}}</pre>
+<div class="row">
+    <div class="col-lg-4">
+        <form [formGroup]="form" autocomplete="off">
+            <!-- Nombre del empleado -->
+            <div class="col-lg-12">
+                <mat-form-field class="form-container">
+                    <mat-label>Nombre Completo</mat-label>
+                    <input matInput formControlName="nombreCompleto">
+                </mat-form-field>
+
+            </div>
+
+            <!-- Email -->
+            <div class="col-lg-12">
+                <mat-form-field class="form-container">
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email">
+                </mat-form-field>
+            </div>
+
+            <!-- Fecha de Ingreso -->
+            <div class="col-lg-12">
+                <mat-form-field class="form-container">
+                    <mat-label>Fecha de ingreso</mat-label>
+                    <input matInput formControlName="fechaIngreso" [matDatepicker]="picker">
+                    <mat-hint>Mes/Día/Año</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker [dateClass]="dateClass" #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <br>
+
+            <!-- Teléfono -->
+            <div class="col-lg-12">
+                <mat-form-field class="form-container">
+                    <mat-label>Teléfono</mat-label>
+                    <input matInput formControlName="telefono">
+                </mat-form-field>
+            </div>
+
+            <!-- Estado Civil -->
+            <div class="col-lg-12">
+                <mat-form-field class="form-container">
+                    <mat-label>Estado civil</mat-label>
+                    <mat-select formControlName="estadoCivil">
+                        <mat-option *ngFor="let estadoCivil of estadosCiviles" [value]="estadoCivil.value">
+                            {{estadoCivil}}
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <!-- Genero -->
+            <br>
+            <div class="col-lg-12">
+                <mat-radio-group aria-label="Seleccione el género" formControlName="genero">
+                    <mat-label class="textGenero">Género</mat-label>
+                    <br>
+                    <mat-radio-button value="Masculino" class="RadioButton">Masculino</mat-radio-button>
+                    <mat-radio-button value="Femenino" class="RadioButton">Femenino</mat-radio-button>
+                    <mat-radio-button value="Bigenero" class="RadioButton">Bigénero</mat-radio-button>
+                    <mat-radio-button value="NoBinario" class="RadioButton">No Binario</mat-radio-button>
+                    <mat-radio-button value="SinGenero" class="RadioButton">Sin Género</mat-radio-button>
+                    <mat-radio-button value="NoSeguro" class="RadioButton">No estoy seguro</mat-radio-button>
+                    <mat-radio-button value="NoDecir" class="RadioButton">No Decir</mat-radio-button>
+                    <mat-radio-button value="Otro">Otro</mat-radio-button>
+                </mat-radio-group>
+            </div>
+
+            <div class="col-lg-12" id="espacio">
+
+                <button type="button" class="btn btn-success btn-lg" id="buttonEnviar"
+                    style="float: right;">Enviar</button>
+
+                <button type="button" class="btn btn-secondary btn-lg" id="buttonCancelar" style="float: right;"
+                    routerLink="/">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-lg-4 offset-lg-2" id="imgFormulario">
+        <img src="../../../assets/img/crear-usuario.jpg">
+    </div>
+</div>

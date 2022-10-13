@@ -1,0 +1,39 @@
+/* Poner el ancho de los Input */
+.form-container {
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Poner Radio Buttons */
+.RadioButton {
+    margin-right: 10px;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+/* Espacio entre Radio Buttons & Buttons de Formulario*/
+#espacio {
+    margin-top: 3em;
+}
+
+/* Poner el Botón de ACEPTAR & CANCELAR del Formulario */
+#buttonEnviar {
+    margin-bottom: 2em;
+    background-color: #C2185B;
+    color: #fff;
+    border-color: #C2185B;
+}
+
+#buttonCancelar {
+    margin-bottom: 2em;
+    background-color: #8b8b8b;
+    color: #C2185B;
+    border-color: #8b8b8b;
+    margin-right: 1em;
+}
+
+/* Imagen del formulario */
+#imgFormulari {
+    width: 85%;
+    height: 85%;
+}
