@@ -41,6 +41,9 @@ import { MatDialogModule } from '@angular/material/dialog';
 //Importar Buttons de Angular
 import { MatButtonModule } from '@angular/material/button';
 
+//Importar SnackBar
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @NgModule({
   declarations: [],
@@ -59,7 +62,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSelectModule,
     MatRadioModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ],
   exports: [
     MatSliderModule,
@@ -75,7 +79,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSelectModule,
     MatRadioModule,
     MatDialogModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSnackBarModule
   ]
 })
 

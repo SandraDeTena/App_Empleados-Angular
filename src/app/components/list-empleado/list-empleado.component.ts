@@ -6,6 +6,7 @@ import { EmpleadoService } from 'src/app/services/empleado.service';
 import { Empleado } from 'src/app/models/empleado';
 import { MatDialog } from '@angular/material/dialog';
 import { MensajeConfirmacionComponent } from '../shared/mensaje-confirmacion/mensaje-confirmacion.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 export interface MyPeople {
   position: number;
@@ -124,7 +125,7 @@ export class ListEmpleadoComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
 
-  constructor(private empleadoService: EmpleadoService, public dialog: MatDialog) { }
+  constructor(private empleadoService: EmpleadoService, public dialog: MatDialog, public snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
 
@@ -158,6 +159,9 @@ export class ListEmpleadoComponent implements OnInit {
         this.empleadoService.eliminarEmpleado(index);
         // Para generar de nuevo
         // this.cargarEmpleados();
+        this.snackBar.open('¡El empleado fue eliminado con exito 🗑️ !', '', {
+          duration: 3000
+        });
         console.log(index);
       }
 
