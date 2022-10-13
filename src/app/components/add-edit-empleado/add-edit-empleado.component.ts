@@ -32,7 +32,14 @@ export class AddEditEmpleadoComponent implements OnInit {
   //Formulario
   form: FormGroup;
   constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({})
+    this.form = this.fb.group({
+      nombreCompleto: [''],
+      email: [''],
+      fechaIngreso: [''],
+      telefono: [''],
+      estadoCivil: [''],
+      genero: ['']
+    })
   }
 
   ngOnInit(): void {

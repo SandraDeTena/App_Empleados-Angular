@@ -12,7 +12,7 @@
             <div class="col-lg-12">
                 <mat-form-field class="form-container">
                     <mat-label>Nombre Completo</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="nombreCompleto">
                 </mat-form-field>
 
             </div>
@@ -21,7 +21,7 @@
             <div class="col-lg-12">
                 <mat-form-field class="form-container">
                     <mat-label>Email</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="email">
                 </mat-form-field>
             </div>
 
@@ -29,18 +29,19 @@
             <div class="col-lg-12">
                 <mat-form-field class="form-container">
                     <mat-label>Fecha de ingreso</mat-label>
-                    <input matInput [matDatepicker]="picker">
+                    <input matInput formControlName="fechaIngreso" [matDatepicker]="picker">
                     <mat-hint>Mes/Día/Año</mat-hint>
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker [dateClass]="dateClass" #picker></mat-datepicker>
                 </mat-form-field>
             </div>
+            <br>
 
             <!-- Teléfono -->
             <div class="col-lg-12">
                 <mat-form-field class="form-container">
                     <mat-label>Teléfono</mat-label>
-                    <input matInput>
+                    <input matInput formControlName="telefono">
                 </mat-form-field>
             </div>
 
@@ -48,7 +49,7 @@
             <div class="col-lg-12">
                 <mat-form-field class="form-container">
                     <mat-label>Estado civil</mat-label>
-                    <mat-select>
+                    <mat-select formControlName="estadoCivil">
                         <mat-option *ngFor="let estadoCivil of estadosCiviles" [value]="estadoCivil.value">
                             {{estadoCivil}}
                         </mat-option>
@@ -59,7 +60,9 @@
             <!-- Genero -->
             <br>
             <div class="col-lg-12">
-                <mat-radio-group aria-label="Seleccione el género">
+                <mat-radio-group aria-label="Seleccione el género" formControlName="genero">
+                    <mat-label class="textGenero">Género</mat-label>
+                    <br>
                     <mat-radio-button value="Masculino" class="RadioButton">Masculino</mat-radio-button>
                     <mat-radio-button value="Femenino" class="RadioButton">Femenino</mat-radio-button>
                     <mat-radio-button value="Bigenero" class="RadioButton">Bigénero</mat-radio-button>
