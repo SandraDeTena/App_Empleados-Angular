@@ -15,3 +15,8 @@ th {
     background-color: #C2185B;
     color: #fff;
 }
+
+/* Cambiar el cursor del ratón */
+.pointer {
+    cursor: pointer;
+}

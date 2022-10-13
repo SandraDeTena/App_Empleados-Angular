@@ -127,7 +127,7 @@ export class ListEmpleadoComponent implements OnInit {
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
-    this.cargarEmpleados;
+    // this.cargarEmpleados;
   }
 
   //Para el filtro
@@ -137,11 +137,18 @@ export class ListEmpleadoComponent implements OnInit {
   }
 
   // Llenar lista de empleados
-  cargarEmpleados() {
-    this.listEmpleado = this.empleadoService.getEmpleados();
-    // this.dataSource = new MatTableDataSource(this.listEmpleado);
-    console.log(this.listEmpleado);
+  // cargarEmpleados() {
+  //   this.listEmpleado = this.empleadoService.getEmpleados();
+  //   this.dataSource = new MatTableDataSource(this.listEmpleado);
+  //   console.log(this.listEmpleado);
+
+  // }
+
+  eliminarEmpleado(index: number) {
+    this.empleadoService.eliminarEmpleado(index);
+    // Para generar de nuevo
+    // this.cargarEmpleados();
+    console.log(index);
 
   }
-
 }
