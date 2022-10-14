@@ -7,6 +7,7 @@ import { Empleado } from '../models/empleado';
 export class EmpleadoService {
   listEmpleado: Empleado[] = [
     {
+      position: 1,
       nombreCompleto: 'Lucas Fernández',
       telefono: '678412563',
       email: 'LucasFndez@gmail.com',
@@ -15,6 +16,7 @@ export class EmpleadoService {
       genero: 'Masculino'
     },
     {
+      position: 2,
       nombreCompleto: 'Rodrigo Aliaga',
       telefono: '673312563',
       email: 'Rodri@gmail.com',
@@ -23,6 +25,7 @@ export class EmpleadoService {
       genero: 'Masculino'
     },
     {
+      position: 3,
       nombreCompleto: 'Lucía Pacho',
       telefono: '778412563',
       email: 'LucíadelaO@gmail.com',
@@ -31,6 +34,7 @@ export class EmpleadoService {
       genero: 'Femenino'
     },
     {
+      position: 4,
       nombreCompleto: 'María González',
       telefono: '714258963',
       email: 'mariaGonzalezCuevas@gmail.com',
@@ -39,6 +43,7 @@ export class EmpleadoService {
       genero: 'Bigénero'
     },
     {
+      position: 4,
       nombreCompleto: 'Javier Ferreiro',
       telefono: '693582471',
       email: 'JavierrrF@gmail.com',
@@ -47,6 +52,7 @@ export class EmpleadoService {
       genero: 'Otro'
     },
     {
+      position: 5,
       nombreCompleto: 'María Belén Arzúa',
       telefono: '655412563',
       email: 'MBelen@gmail.com',
@@ -55,6 +61,7 @@ export class EmpleadoService {
       genero: 'Femenino'
     },
     {
+      position: 6,
       nombreCompleto: 'Estefi Daniella',
       telefono: '625237894',
       email: 'EsfefiDaniella@gmail.com',
@@ -63,6 +70,7 @@ export class EmpleadoService {
       genero: 'Otros'
     },
     {
+      position: 7,
       nombreCompleto: 'Manuel Cerrato',
       telefono: '677892563',
       email: 'MCerrato@gmail.com',
@@ -71,6 +79,7 @@ export class EmpleadoService {
       genero: 'Masculino'
     },
     {
+      position: 8,
       nombreCompleto: 'Aurora Agüero',
       telefono: '677117863',
       email: 'AuroraBoreal@gmail.com',
@@ -79,6 +88,7 @@ export class EmpleadoService {
       genero: 'Prefiero no decir'
     },
     {
+      position: 9,
       nombreCompleto: 'Manuela Cerrato',
       telefono: '676892563',
       email: 'ManuelaCerrato@gmail.com',

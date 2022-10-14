@@ -1,4 +1,5 @@
 export interface Empleado {
+    position?: number;
     nombreCompleto: string;
     telefono: string;
     email: string;
