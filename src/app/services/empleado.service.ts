@@ -95,6 +95,15 @@ export class EmpleadoService {
       fechaIngreso: new Date('2019-02-06'),
       estadoCivil: 'Viuda',
       genero: 'Bigénero'
+    },
+    {
+      position: 10,
+      nombreCompleto: 'Andrés Del Pozo',
+      telefono: '689892563',
+      email: 'AndrésMoral@gmail.com',
+      fechaIngreso: new Date('2018-11-06'),
+      estadoCivil: 'Viudo',
+      genero: 'Bigénero'
     }
 
   ]
