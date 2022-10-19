@@ -58,6 +58,7 @@ export class AddEditEmpleadoComponent implements OnInit {
   }
 
   guardarEmpleado() {
+<<<<<<< HEAD
     console.log(this.form);
 
     // const empleado: Empleado = {
@@ -74,6 +75,22 @@ export class AddEditEmpleadoComponent implements OnInit {
     //   duration: 3000
     // });
     // this.route.navigate('/');
+=======
+    const empleado: Empleado = {
+      nombreCompleto: this.form.get('nombreCompleto')?.value,
+      email: this.form.get('email')?.value,
+      fechaIngreso: this.form.get('fechaIngreso')?.value,
+      telefono: this.form.get('telefono')?.value,
+      estadoCivil: this.form.get('estadoCivil')?.value,
+      genero: this.form.get('genero')?.value,
+    };
+    this.empleadoService.agregarEmpleado(empleado);
+    console.log(empleado);
+    this.snackBar.open('¡El empleado fue agregado a la tabla con exito 🗑️ !', '', {
+      duration: 3000
+    });
+    this.route.navigate('/');
+>>>>>>> routing
 
   }
 
