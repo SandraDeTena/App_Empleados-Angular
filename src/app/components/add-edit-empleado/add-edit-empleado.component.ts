@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Empleado } from 'src/app/models/empleado';
 import { EmpleadoService } from 'src/app/services/empleado.service';
 
@@ -41,7 +41,8 @@ export class AddEditEmpleadoComponent implements OnInit {
     private fb: FormBuilder,
     private empleadoService: EmpleadoService,
     private snackBar: MatSnackBar,
-    private route: Router
+    private route: Router,
+    private activateRoute: ActivatedRoute
   ) {
 
     this.form = this.fb.group({
