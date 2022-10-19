@@ -71,7 +71,7 @@ export class AddEditEmpleadoComponent implements OnInit {
     this.snackBar.open('¡El empleado fue agregado a la tabla con exito 🗑️ !', '', {
       duration: 3000
     });
-    // this.route.navigate('/');
+    this.route.navigate('/');
 
   }
 
