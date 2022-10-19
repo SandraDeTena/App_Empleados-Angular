@@ -1,6 +1,6 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -45,7 +45,7 @@ export class AddEditEmpleadoComponent implements OnInit {
   ) {
 
     this.form = this.fb.group({
-      nombreCompleto: [''],
+      nombreCompleto: ['', Validators.required],
       email: [''],
       fechaIngreso: [''],
       telefono: [''],
@@ -58,19 +58,21 @@ export class AddEditEmpleadoComponent implements OnInit {
   }
 
   guardarEmpleado() {
-    const empleado: Empleado = {
-      nombreCompleto: this.form.get('nombreCompleto')?.value,
-      email: this.form.get('email')?.value,
-      fechaIngreso: this.form.get('fechaIngreso')?.value,
-      telefono: this.form.get('telefono')?.value,
-      estadoCivil: this.form.get('estadoCivil')?.value,
-      genero: this.form.get('genero')?.value,
-    };
-    this.empleadoService.agregarEmpleado(empleado);
-    console.log(empleado);
-    this.snackBar.open('¡El empleado fue agregado a la tabla con exito 🗑️ !', '', {
-      duration: 3000
-    });
+    console.log(this.form);
+
+    // const empleado: Empleado = {
+    //   nombreCompleto: this.form.get('nombreCompleto')?.value,
+    //   email: this.form.get('email')?.value,
+    //   fechaIngreso: this.form.get('fechaIngreso')?.value,
+    //   telefono: this.form.get('telefono')?.value,
+    //   estadoCivil: this.form.get('estadoCivil')?.value,
+    //   genero: this.form.get('genero')?.value,
+    // };
+    // this.empleadoService.agregarEmpleado(empleado);
+    // console.log(empleado);
+    // this.snackBar.open('¡El empleado fue agregado a la tabla con exito 🗑️ !', '', {
+    //   duration: 3000
+    // });
     // this.route.navigate('/');
 
   }
