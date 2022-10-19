@@ -10,7 +10,7 @@ const routes: Routes = [
   // Cuándo no ponga ruta y sea sólo el inicio de la ruta, te lleva a Lista de Empleados
   { path: '', component: ListEmpleadoComponent },
 
-  //Cuádo sea ADD que es añadir, te rediriga a Añadir Empleado
+  //Cuádo sea ADD que es añadir, te rediriga a Añadir Empleado -Formulario-
   { path: 'add', component: AddEditEmpleadoComponent },
 
   //Cuádo sea EDIT que es EDITAR,con el ID de forma dinámica, te rediriga a Editar Empleado
