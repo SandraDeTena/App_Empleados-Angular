@@ -143,7 +143,7 @@ export class ListEmpleadoComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.cargarEmpleados;
+    this.cargarEmpleados();
   }
 
   //Para el filtro

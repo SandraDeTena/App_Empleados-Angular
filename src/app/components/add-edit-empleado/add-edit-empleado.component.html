@@ -50,8 +50,8 @@
                 <mat-form-field class="form-container">
                     <mat-label>Estado civil</mat-label>
                     <mat-select formControlName="estadoCivil">
-                        <mat-option *ngFor="let estadoCivil of estadosCiviles" [value]="estadoCivil.value">
-                            {{estadoCivil}}
+                        <mat-option *ngFor="let estadoCivil of estadosCiviles" [value]="estadoCivil">
+                            {{ estadoCivil }}
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
