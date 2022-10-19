@@ -3,6 +3,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+import { Empleado } from 'src/app/models/empleado';
+import { EmpleadoService } from 'src/app/services/empleado.service';
 
 @Component({
   selector: 'add-edit-empleado',
@@ -32,7 +36,14 @@ export class AddEditEmpleadoComponent implements OnInit {
   //Formulario
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+
+  constructor(
+    private fb: FormBuilder,
+    private empleadoService: EmpleadoService,
+    private snackBar: MatSnackBar,
+    private route: Router
+  ) {
+
     this.form = this.fb.group({
       nombreCompleto: [''],
       email: [''],
@@ -44,6 +55,24 @@ export class AddEditEmpleadoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  guardarEmpleado() {
+    const empleado: Empleado = {
+      nombreCompleto: this.form.get('nombreCompleto')?.value,
+      email: this.form.get('email')?.value,
+      fechaIngreso: this.form.get('fechaIngreso')?.value,
+      telefono: this.form.get('telefono')?.value,
+      estadoCivil: this.form.get('estadoCivil')?.value,
+      genero: this.form.get('genero')?.value,
+    };
+    this.empleadoService.agregarEmpleado(empleado);
+    console.log(empleado);
+    this.snackBar.open('¡El empleado fue agregado a la tabla con exito 🗑️ !', '', {
+      duration: 3000
+    });
+    // this.route.navigate('/');
+
   }
 
 }
