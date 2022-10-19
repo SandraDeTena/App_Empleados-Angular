@@ -45,12 +45,12 @@ export class AddEditEmpleadoComponent implements OnInit {
   ) {
 
     this.form = this.fb.group({
-      nombreCompleto: ['', Validators.required],
+      nombreCompleto: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
       email: [''],
-      fechaIngreso: [''],
-      telefono: [''],
-      estadoCivil: [''],
-      genero: ['']
+      fechaIngreso: ['', Validators.required],
+      telefono: ['', Validators.required],
+      estadoCivil: ['', Validators.required],
+      genero: ['', Validators.required]
     })
   }
 

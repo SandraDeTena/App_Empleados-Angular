@@ -14,8 +14,21 @@
                     <mat-label>Nombre Completo</mat-label>
                     <input matInput formControlName="nombreCompleto">
                 </mat-form-field>
+                <!-- ERRORES -->
+                <!-- Error Requerido y al tocar el campo -->
                 <div style="margin-top: -20px;">
                     <span class="mda-form-msg">* Este campo es <strong>requerido</strong>.</span>
+                </div>
+
+                <!-- Error minimo de letras en el campo -->
+                <div style="margin-top: -20px;">
+                    <span class="mda-form-msg">* El campo debe tener como mìnimo <strong>3 carácteres</strong>.</span>
+                    <!-- *ngIf="form.get('nombreCompleto').hasError('minlength') && form.get('nombreCompleto').touched" -->
+                </div>
+
+                <!-- Error máximo de letras en el campo -->
+                <div style="margin-top: -20px;">
+                    <span class="mda-form-msg">* El campo debe tener como máximo <strong>20 carácteres</strong>.</span>
                 </div>
 
             </div>
