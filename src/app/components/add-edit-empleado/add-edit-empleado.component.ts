@@ -50,21 +50,11 @@ export class AddEditEmpleadoComponent implements OnInit {
     this.form = this.fb.group({
       nombreCompleto: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
       email: [''],
-<<<<<<< HEAD
-      fechaIngreso: [''],
-      telefono: [''],
-      estadoCivil: [''],
-      genero: ['']
-    });
-    const idParams = 'id';
-    this.idEmpleado = this.activateRoute.snapshot.params[idParams];
-=======
       fechaIngreso: ['', Validators.required],
       telefono: ['', Validators.required],
       estadoCivil: ['', Validators.required],
       genero: ['', Validators.required]
     })
->>>>>>> validar-form
   }
 
   ngOnInit(): void {
