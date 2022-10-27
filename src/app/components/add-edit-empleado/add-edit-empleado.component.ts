@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Empleado } from 'src/app/models/empleado';
 import { EmpleadoService } from 'src/app/services/empleado.service';
 
@@ -32,6 +32,8 @@ export class AddEditEmpleadoComponent implements OnInit {
 
   //Estados civiles
   estadosCiviles: any[] = ['Soltero/a', 'Casado/a', 'Viudo/a', 'Divorciado/a'];
+  idEmpleado: any;
+  accion = 'Crear';
 
   //Formulario
   form: FormGroup;
@@ -41,7 +43,8 @@ export class AddEditEmpleadoComponent implements OnInit {
     private fb: FormBuilder,
     private empleadoService: EmpleadoService,
     private snackBar: MatSnackBar,
-    private route: Router
+    private route: Router,
+    private activateRoute: ActivatedRoute
   ) {
 
     this.form = this.fb.group({
@@ -51,10 +54,16 @@ export class AddEditEmpleadoComponent implements OnInit {
       telefono: [''],
       estadoCivil: [''],
       genero: ['']
-    })
+    });
+    const idParams = 'id';
+    this.idEmpleado = this.activateRoute.snapshot.params[idParams];
   }
 
   ngOnInit(): void {
+    if (this.idEmpleado !== undefined) {
+      this.accion = 'Editar';
+      this.esEditar();
+    }
   }
 
   guardarEmpleado() {
@@ -66,13 +75,45 @@ export class AddEditEmpleadoComponent implements OnInit {
       estadoCivil: this.form.get('estadoCivil')?.value,
       genero: this.form.get('genero')?.value,
     };
+
+    if (this.idEmpleado !== undefined) {
+      this.editarEmpleado(empleado);
+    } else {
+      this.agregarEmpleado(empleado);
+    }
+  }
+  agregarEmpleado(empleado: Empleado) {
     this.empleadoService.agregarEmpleado(empleado);
     console.log(empleado);
-    this.snackBar.open('¡El empleado fue agregado a la tabla con exito 🗑️ !', '', {
+    this.snackBar.open('¡El empleado fue agregado a la tabla con éxito 👌 !', '', {
       duration: 3000
     });
     // this.route.navigate('/');
-
   }
 
+  editarEmpleado(empleado: Empleado) {
+    this.empleadoService.editEmpleado(empleado, this.idEmpleado);
+    this.snackBar.open('¡El empleado fue actualizado con éxito 👍︎!', '', {
+      duration: 3000
+    });
+    // this.route.navigate('/');
+  }
+
+  esEditar() {
+    const empleado: Empleado = this.empleadoService.getEmpleado(this.idEmpleado);
+    console.log(empleado);
+    this.form.patchValue({
+      nombreCompleto: empleado.nombreCompleto,
+      email: empleado.email,
+      fechaIngreso: empleado.fechaIngreso,
+      telefono: empleado.telefono,
+      estadoCivil: empleado.estadoCivil,
+      genero: empleado.genero,
+    })
+
+  }
 }
+
+
+
+
