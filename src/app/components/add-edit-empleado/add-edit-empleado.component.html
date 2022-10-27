@@ -16,22 +16,22 @@
                 </mat-form-field>
                 <!-- ERRORES -->
                 <!-- Error Requerido y al tocar el campo -->
-                <!-- <div *ngIf="form.get('nombreCompleto').hasError('required') && form.get('nombreCompleto').touched"
+                <div *ngIf="form.get('nombreCompleto')?.hasError?.('required') && form.get('nombreCompleto')?.touched"
                     style="margin-top: -20px;">
                     <span class="mda-form-msg">Este campo es <strong>requerido</strong></span>
-                </div> -->
+                </div>
 
                 <!-- Error minimo de letras en el campo -->
-                <!-- <div *ngIf="form.get('nombreCompleto').hasError('maxlength') && form.get('nombreCompleto').touched"
+                <div *ngIf="form.get('nombreCompleto')?.hasError?.('maxlength') && form.get('nombreCompleto')?.touched"
                     style="margin-top: -20px;">
                     <span class="mda-form-msg">El campo debe tener como minimo <strong> 3 carácteres</strong></span>
-                </div> -->
+                </div>
 
                 <!-- Error máximo de letras en el campo -->
-                <!-- <div *ngIf="form.get('nombreCompleto').hasError('maxlength') && form.get('nombreCompleto').touched"
+                <div *ngIf="form.get('nombreCompleto')?.hasError?.('maxlength') && form.get('nombreCompleto')?.touched"
                     style="margin-top: -20px;">
                     <span class="mda-form-msg">El campo debe tener como maximo <strong> 20 carácteres</strong></span>
-                </div> -->
+                </div>
 
             </div>
 
