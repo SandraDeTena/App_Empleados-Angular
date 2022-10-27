@@ -1,4 +1,4 @@
-import { ThisReceiver } from '@angular/compiler';
+
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
@@ -38,7 +38,6 @@ export class AddEditEmpleadoComponent implements OnInit {
   //Formulario
   form: FormGroup;
 
-
   constructor(
     private fb: FormBuilder,
     private empleadoService: EmpleadoService,
@@ -55,6 +54,8 @@ export class AddEditEmpleadoComponent implements OnInit {
       estadoCivil: ['', Validators.required],
       genero: ['', Validators.required]
     })
+    const idParam = 'id';
+    this.idEmpleado = this.activateRoute.snapshot.params[idParam];
   }
 
   ngOnInit(): void {
@@ -86,7 +87,7 @@ export class AddEditEmpleadoComponent implements OnInit {
     this.snackBar.open('¡El empleado fue agregado a la tabla con éxito 👌 !', '', {
       duration: 3000
     });
-    // this.route.navigate('/');
+    this.route.navigate(['/']);
   }
 
   editarEmpleado(empleado: Empleado) {
@@ -94,7 +95,7 @@ export class AddEditEmpleadoComponent implements OnInit {
     this.snackBar.open('¡El empleado fue actualizado con éxito 👍︎!', '', {
       duration: 3000
     });
-    // this.route.navigate('/');
+    this.route.navigate(['/']);
   }
 
   esEditar() {
@@ -107,7 +108,7 @@ export class AddEditEmpleadoComponent implements OnInit {
       telefono: empleado.telefono,
       estadoCivil: empleado.estadoCivil,
       genero: empleado.genero,
-    })
+    });
 
   }
 }
