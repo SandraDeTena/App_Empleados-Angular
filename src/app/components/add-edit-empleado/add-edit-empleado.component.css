@@ -37,3 +37,8 @@
     width: 85%;
     height: 85%;
 }
+
+/* Validar los span de los errores */
+.mda-form-msg {
+    color: #f81505;
+}

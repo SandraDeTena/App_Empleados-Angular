@@ -1,6 +1,6 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatCalendarCellClassFunction } from '@angular/material/datepicker';
 import { MAT_RADIO_DEFAULT_OPTIONS } from '@angular/material/radio';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -48,8 +48,9 @@ export class AddEditEmpleadoComponent implements OnInit {
   ) {
 
     this.form = this.fb.group({
-      nombreCompleto: [''],
+      nombreCompleto: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
       email: [''],
+<<<<<<< HEAD
       fechaIngreso: [''],
       telefono: [''],
       estadoCivil: [''],
@@ -57,6 +58,13 @@ export class AddEditEmpleadoComponent implements OnInit {
     });
     const idParams = 'id';
     this.idEmpleado = this.activateRoute.snapshot.params[idParams];
+=======
+      fechaIngreso: ['', Validators.required],
+      telefono: ['', Validators.required],
+      estadoCivil: ['', Validators.required],
+      genero: ['', Validators.required]
+    })
+>>>>>>> validar-form
   }
 
   ngOnInit(): void {
