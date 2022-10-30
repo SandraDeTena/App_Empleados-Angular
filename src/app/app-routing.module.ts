@@ -4,8 +4,9 @@ import { AddEditEmpleadoComponent } from './components/add-edit-empleado/add-edi
 import { ListEmpleadoComponent } from './components/list-empleado/list-empleado.component';
 
 const routes: Routes = [
-  // Cuándo el user ponga otra dirección y no tengamos esa ruta va a Lista de Empleados
-  { path: '**', component: ListEmpleadoComponent },
+
+  // { path: 'lista-empleados', component: ListEmpleadoComponent },
+  // { path: '', redirectTo: 'lista-empleados', pathMatch: 'full' },
 
   // Cuándo no ponga ruta y sea sólo el inicio de la ruta, te lleva a Lista de Empleados
   { path: '', component: ListEmpleadoComponent },
@@ -15,6 +16,9 @@ const routes: Routes = [
 
   //Cuádo sea EDIT que es EDITAR,con el ID de forma dinámica, te rediriga a Editar Empleado
   { path: 'edit/:id', component: AddEditEmpleadoComponent },
+
+  // Cuándo el user ponga otra dirección y no tengamos esa ruta va a Lista de Empleados
+  { path: '**', component: ListEmpleadoComponent },
 
 ];
 
