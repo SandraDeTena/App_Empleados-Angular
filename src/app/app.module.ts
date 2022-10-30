@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MensajeConfirmacionComponent } from './components/shared/mensaje-confirmacion/mensaje-confirmacion.component';
 import { AngularMaterialModule } from './components/shared/angular-material/angular-material.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListEmpleadoComponent,
     NavbarComponent,
     FooterComponent,
-    MensajeConfirmacionComponent
+    MensajeConfirmacionComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
