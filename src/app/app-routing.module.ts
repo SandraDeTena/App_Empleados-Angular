@@ -19,10 +19,14 @@ const routes: Routes = [
   { path: 'edit/:id', component: AddEditEmpleadoComponent },
 
   //Cuádo pongas una ruta que no existe
-  { path: 'edit/:id', component: PageNotFoundComponent },
+  { path: 'edit/:id', component: AddEditEmpleadoComponent },
 
   // Cuándo el user ponga otra dirección y no tengamos esa ruta va a Lista de Empleados
-  { path: '**', component: ListEmpleadoComponent },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+  }
+
 
 ];
 
