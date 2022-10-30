@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddEditEmpleadoComponent } from './components/add-edit-empleado/add-edit-empleado.component';
 import { ListEmpleadoComponent } from './components/list-empleado/list-empleado.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
 
@@ -16,6 +17,9 @@ const routes: Routes = [
 
   //Cuádo sea EDIT que es EDITAR,con el ID de forma dinámica, te rediriga a Editar Empleado
   { path: 'edit/:id', component: AddEditEmpleadoComponent },
+
+  //Cuádo pongas una ruta que no existe
+  { path: 'edit/:id', component: PageNotFoundComponent },
 
   // Cuándo el user ponga otra dirección y no tengamos esa ruta va a Lista de Empleados
   { path: '**', component: ListEmpleadoComponent },
