@@ -44,6 +44,9 @@ import { MatButtonModule } from '@angular/material/button';
 //Importar SnackBar
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 
+//Importar mat-card
+import { MatCardModule } from '@angular/material/card';
+
 
 @NgModule({
   declarations: [],
@@ -63,7 +66,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatRadioModule,
     MatDialogModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule
   ],
   exports: [
     MatSliderModule,
@@ -80,7 +84,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatRadioModule,
     MatDialogModule,
     MatButtonModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule
   ]
 })
 
